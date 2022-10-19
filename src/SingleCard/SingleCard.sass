@@ -1,0 +1,36 @@
+.cards-grid
+		width: 1200px
+		margin: 4rem auto 0
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+		gap: 1.5rem
+
+		&__card
+				
+				border-radius: 5px
+				overflow: hidden
+				position: relative
+
+				&--front
+						
+						position: absolute
+						transform: rotateY(90deg)
+						transition: .3s
+						
+
+				&--back
+						width: 100%
+						transition: .3s
+						transition-delay: .3s
+
+		&__flipped
+			.cards-grid__card--back
+				transform: rotateY(90deg)
+				transition-delay: 0s
+				
+				
+		&__flipped
+			.cards-grid__card--front
+				transform: rotateY(0)
+				transition-delay: .3s
+
